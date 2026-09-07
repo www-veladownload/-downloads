@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b12" />
+  <meta name="description" content="VELA Drop — beautiful, fast file transfers." />
+  <title>VELA Drop — Send without friction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+<style>
+:root{--bg:#09090e;--panel:#101018;--panel2:#15151f;--text:#f6f5fb;--muted:#9d9ba9;--line:rgba(255,255,255,.09);--accent:#9c7cff;--accent2:#4de1c1;--shadow:0 30px 100px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,rgba(156,124,255,.17),transparent 35%),var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;line-height:1.5}.ambient{position:fixed;pointer-events:none;filter:blur(80px);opacity:.12;z-index:-1}.ambient-a{width:260px;height:260px;background:#9274ff;left:-120px;top:28%}.ambient-b{width:220px;height:220px;background:#33e0c0;right:-100px;top:65%}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px max(16px,calc((100% - 1120px)/2));background:rgba(9,9,14,.74);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text);font-family:'Space Grotesk';font-weight:700;letter-spacing:.08em}.brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#d0bfff);color:#120d24;font-weight:800;box-shadow:0 8px 25px rgba(156,124,255,.28)}nav{display:flex;gap:30px}nav a,.text-link{color:var(--muted);text-decoration:none;font-size:14px}nav a:hover,.text-link:hover{color:var(--text)}.status-pill{font-size:12px;color:#d9d7e2;border:1px solid var(--line);background:rgba(255,255,255,.035);padding:8px 12px;border-radius:999px;text-decoration:none}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 15px var(--accent2);margin-right:7px}.hero{padding:110px 0 85px}.eyebrow,.kicker{font-size:11px;letter-spacing:.19em;color:#a8a4b6;font-weight:700}.hero h1{font-family:'Space Grotesk';font-size:clamp(52px,8vw,92px);line-height:.94;letter-spacing:-.065em;margin:18px 0 26px;max-width:900px}.hero h1 em{font-style:normal;background:linear-gradient(90deg,#fff,var(--accent),#6be5ca);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{max-width:600px;font-size:18px;color:var(--muted);margin:0}.hero-actions{display:flex;align-items:center;gap:20px;margin-top:34px}.button{border:0;cursor:pointer;border-radius:14px;padding:13px 17px;font-family:inherit;font-weight:700;font-size:14px;transition:.2s transform,.2s opacity,.2s box-shadow}.button:hover{transform:translateY(-1px)}.button:disabled{opacity:.4;cursor:not-allowed;transform:none}.primary{color:#171320;background:linear-gradient(135deg,#c2afff,var(--accent));box-shadow:0 12px 35px rgba(156,124,255,.2)}.secondary{color:var(--text);background:#1a1923;border:1px solid var(--line)}.large{padding:16px 22px}.mini-proof{font-size:12px;color:#777583;margin-top:20px}.mini-proof span{color:var(--accent2)}.workspace,.activity,.why{padding:40px 0 72px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:18px}.section-head h2{font-family:'Space Grotesk';font-size:36px;letter-spacing:-.04em;margin:6px 0 0}.limit-note{font-size:12px;color:var(--muted)}.drop-card{min-height:330px;border:1px dashed rgba(194,175,255,.35);border-radius:28px;background:linear-gradient(135deg,rgba(156,124,255,.08),rgba(255,255,255,.02));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:var(--shadow);transition:.25s border,.25s background}.drop-card.drag{border-color:var(--accent2);background:rgba(77,225,193,.06)}.drop-icon{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;background:rgba(156,124,255,.12);font-size:30px;color:#c8b9ff;margin-bottom:14px}.drop-card h3{font-family:'Space Grotesk';font-size:25px;margin:0 0 5px}.drop-card p{color:var(--muted);margin:0 0 18px}.file-preview{margin-top:15px;color:#e4e1eb;font-size:13px;max-width:75%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.controls{display:grid;grid-template-columns:1fr auto;gap:14px;margin-top:14px}.select-box{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:8px 14px;display:flex;align-items:center;justify-content:space-between}.select-box span{font-size:10px;letter-spacing:.14em;color:#817e8e;font-weight:800}.select-box select{border:0;background:transparent;color:var(--text);font:600 14px inherit;outline:none}.select-box option{background:#16151e}.result-card{margin-top:14px;padding:18px;border:1px solid rgba(77,225,193,.2);background:rgba(77,225,193,.05);border-radius:18px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.result-name{font-weight:700;margin-top:4px}.result-sub{font-size:12px;color:#8f8d98}.result-link{grid-column:1/-1;border:1px solid var(--line);background:#0c0c12;border-radius:10px;padding:11px 13px;font-size:12px;color:#c4c0cc;overflow:hidden;text-overflow:ellipsis}.stats-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin-bottom:60px}.stats-strip div{text-align:center;border-right:1px solid var(--line)}.stats-strip div:last-child{border-right:0}.stats-strip strong{display:block;font-family:'Space Grotesk';font-size:29px}.stats-strip span{font-size:11px;color:var(--muted);letter-spacing:.04em}.activity-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}.empty-state{padding:45px;text-align:center;color:var(--muted);font-size:14px}.activity-row{display:grid;grid-template-columns:1fr 120px 150px auto;gap:15px;align-items:center;padding:17px 19px;border-bottom:1px solid var(--line)}.activity-row:last-child{border-bottom:0}.file-name{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.file-meta{font-size:11px;color:var(--muted)}.activity-size,.activity-expiry{font-size:12px;color:#b1aebb}.activity-link{color:#d8d1ff;text-decoration:none;font-size:12px}.ghost-btn{border:1px solid var(--line);background:transparent;color:#aaa6b3;border-radius:10px;padding:8px 12px;cursor:pointer}.why{padding-top:20px}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.why article{min-height:230px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:20px;padding:23px}.why article span{color:#787482;font-size:12px}.why h3{font-family:'Space Grotesk';font-size:25px;letter-spacing:-.03em;margin:50px 0 9px}.why p{color:var(--muted);margin:0;font-size:14px}.footer{border-top:1px solid var(--line);padding:25px 0 45px;display:flex;justify-content:space-between;color:#76727f;font-size:11px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,30px);opacity:0;z-index:100;background:#17161f;border:1px solid var(--line);box-shadow:var(--shadow);padding:11px 15px;border-radius:12px;font-size:13px;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:720px){nav{display:none}.hero{padding:80px 0 65px}.hero h1{font-size:56px}.hero-copy{font-size:16px}.section-head{align-items:flex-start;flex-direction:column}.controls{grid-template-columns:1fr}.stats-strip{grid-template-columns:1fr;gap:18px}.stats-strip div{border-right:0}.why-grid{grid-template-columns:1fr}.activity-row{grid-template-columns:1fr auto}.activity-size,.activity-expiry{display:none}.footer{gap:12px;flex-wrap:wrap}.result-card{grid-template-columns:1fr}.result-card .button{width:100%}}
+.promo-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(6,6,10,.7);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .25s ease}.promo-overlay.show{opacity:1;pointer-events:auto}.promo-card{position:relative;width:min(380px,100%);background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;padding:28px 26px 26px;box-shadow:var(--shadow);transform:translateY(14px) scale(.98);transition:transform .25s ease}.promo-overlay.show .promo-card{transform:translateY(0) scale(1)}.promo-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);font-size:16px;line-height:1;cursor:pointer;display:grid;place-items:center}.promo-close:hover{color:var(--text);background:rgba(255,255,255,.09)}.promo-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(77,225,193,.14);font-size:26px;margin-bottom:16px}.promo-card h3{font-family:'Space Grotesk';font-size:22px;letter-spacing:-.02em;margin:0 0 8px}.promo-card p{color:var(--muted);font-size:14px;margin:0 0 22px;line-height:1.5}.promo-actions{display:flex;align-items:center;gap:14px}.promo-actions .button{flex:1;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.promo-later{background:transparent;color:var(--muted);border:none;font-size:13px;cursor:pointer;padding:13px 6px;white-space:nowrap}.promo-later:hover{color:var(--text)}
+</style>
+</head>
+<body>
+  <div class="promo-overlay" id="promoOverlay">
+    <div class="promo-card">
+      <button class="promo-close" id="promoClose" aria-label="Close">✕</button>
+      <div class="promo-icon">📣</div>
+      <h3>Stay in the loop</h3>
+      <p>Join the channel for more updates like this — new features, tips, and everything VELA ships next.</p>
+      <div class="promo-actions">
+        <button class="promo-later" id="promoLater">Maybe later</button>
+        <a class="button primary" href="https://whatsapp.com/channel/0029VbDjQS58qIzxyqkEag0j" target="_blank" rel="noopener noreferrer">Join channel</a>
+      </div>
+    </div>
+  </div>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div id="toast" class="toast"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">V</span><span>VELA</span></a>
+    <nav>
+      <a href="#drop">Drop</a><a href="#activity">Activity</a><a href="#about">Why Vela</a>
+    </nav>
+    <a class="status-pill" href="#drop"><span class="status-dot"></span> Live workspace</a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow">THE CLEAN WAY TO MOVE FILES</div>
+      <h1>Send anything.<br><em>Lose the friction.</em></h1>
+      <p class="hero-copy">A focused file-transfer workspace built for quick handoffs, clean share links, and zero clutter.</p>
+      <div class="hero-actions"><a class="button primary" href="#drop">Create a drop <span>↗</span></a><a class="text-link" href="#activity">View activity →</a></div>
+      <div class="mini-proof"><span>●</span> Files are private by link &nbsp;·&nbsp; Links expire automatically</div>
+    </section>
+
+    <section class="workspace wrap" id="drop">
+      <div class="section-head"><div><div class="kicker">01 / DROP</div><h2>Make a share link</h2></div><div class="limit-note">Up to <strong id="limitText">50 MB</strong> per file</div></div>
+      <div class="drop-card" id="dropZone">
+        <div class="drop-icon">↥</div>
+        <h3 id="dropTitle">Drop your file here</h3>
+        <p id="dropHint">or tap to choose from your device</p>
+        <input id="fileInput" type="file" hidden />
+        <button class="button secondary" id="chooseBtn">Choose a file</button>
+        <div class="file-preview" id="filePreview"></div>
+      </div>
+      <div class="controls">
+        <div class="select-box"><span>LINK LIFETIME</span><select id="expiry"><option value="1">1 hour</option><option value="24" selected>24 hours</option><option value="72">3 days</option><option value="168">7 days</option></select></div>
+        <button class="button primary large" id="uploadBtn" disabled>Generate secure link <span>→</span></button>
+      </div>
+      <div class="result-card" id="resultCard" hidden>
+        <div><div class="kicker">YOUR LINK IS READY</div><div class="result-name" id="resultName">file.zip</div><div class="result-sub" id="resultExpiry">Expires in 24 hours</div></div>
+        <button class="button secondary" id="copyBtn">Copy link</button>
+        <div class="result-link" id="resultLink"></div>
+      </div>
+    </section>
+
+    <section class="stats-strip wrap">
+      <div><strong id="statTransfers">0</strong><span>drops created</span></div><div><strong id="statActive">0</strong><span>links live</span></div><div><strong id="statBytes">0 B</strong><span>moved through VELA</span></div>
+    </section>
+
+    <section class="activity wrap" id="activity">
+      <div class="section-head"><div><div class="kicker">02 / ACTIVITY</div><h2>Recent drops</h2></div><button class="ghost-btn" id="refreshBtn">↻ Refresh</button></div>
+      <div class="activity-card" id="activityList"><div class="empty-state">Your recent transfers will appear here.</div></div>
+    </section>
+
+    <section class="why wrap" id="about">
+      <div class="kicker">03 / WHY VELA</div><div class="why-grid">
+        <article><span>01</span><h3>Less surface area.</h3><p>No accounts, feeds, dashboards full of noise, or unnecessary steps. Pick a file and move.</p></article>
+        <article><span>02</span><h3>Links with a shelf life.</h3><p>Every drop can expire automatically, keeping old handoffs from hanging around forever.</p></article>
+        <article><span>03</span><h3>Built to feel fast.</h3><p>Minimal UI, direct downloads, and a responsive layout that works cleanly on phones.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><div class="brand"><span class="brand-mark">V</span><span>VELA</span></div><span>© 2026 VELA Drop</span><span>Fast by design.</span></footer>
+  <script src="/app.js"></script>
+<script>
+// Backend now lives on Render, at a different domain than this page.
+const API_BASE = 'https://back-ygow.onrender.com';
+
+const $ = (s) => document.querySelector(s);
+const fileInput = $('#fileInput'), dropZone = $('#dropZone'), chooseBtn = $('#chooseBtn'), uploadBtn = $('#uploadBtn');
+let chosenFile = null;
+
+const toast = (msg) => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(window.__toast); window.__toast=setTimeout(()=>t.classList.remove('show'),2400); };
+const formatBytes = (bytes) => { if (!bytes) return '0 B'; const units=['B','KB','MB','GB']; const i=Math.min(Math.floor(Math.log(bytes)/Math.log(1024)),units.length-1); return `${(bytes/1024**i).toFixed(i?1:0)} ${units[i]}`; };
+const remaining = (ts) => { const hrs=Math.max(1,Math.round((ts-Date.now())/3600000)); return hrs>=24 ? `${Math.ceil(hrs/24)}d left` : `${hrs}h left`; };
+const setFile = (file) => { chosenFile=file||null; $('#filePreview').textContent=file ? `${file.name} · ${formatBytes(file.size)}` : ''; uploadBtn.disabled=!file; $('#dropTitle').textContent=file ? file.name : 'Drop your file here'; $('#dropHint').textContent=file ? 'Ready to create a secure share link' : 'or tap to choose from your device'; };
+chooseBtn.addEventListener('click',()=>fileInput.click());
+fileInput.addEventListener('change',e=>setFile(e.target.files[0]));
+['dragenter','dragover'].forEach(ev=>dropZone.addEventListener(ev,e=>{e.preventDefault();dropZone.classList.add('drag')}));
+['dragleave','drop'].forEach(ev=>dropZone.addEventListener(ev,e=>{e.preventDefault();dropZone.classList.remove('drag')}));
+dropZone.addEventListener('drop',e=>setFile(e.dataTransfer.files[0]));
+
+async function createTransfer(){
+  if(!chosenFile)return; uploadBtn.disabled=true; uploadBtn.innerHTML='Uploading… <span>↗</span>';
+  try{
+    const fd=new FormData(); fd.append('file',chosenFile); fd.append('expiresHours',$('#expiry').value);
+    const r=await fetch(`${API_BASE}/api/transfers`,{method:'POST',body:fd}); const data=await r.json(); if(!r.ok)throw new Error(data.error||'Upload failed');
+    $('#resultCard').hidden=false; $('#resultName').textContent=data.originalName; $('#resultExpiry').textContent=`Expires ${new Date(data.expiresAt).toLocaleString()}`; $('#resultLink').textContent=data.downloadUrl;
+    $('#copyBtn').onclick=()=>navigator.clipboard.writeText(data.downloadUrl).then(()=>toast('Link copied to clipboard'));
+    toast('Secure link created'); loadAll();
+  }catch(err){toast(err.message)} finally{uploadBtn.disabled=!chosenFile; uploadBtn.innerHTML='Generate secure link <span>→</span>'}
+}
+uploadBtn.addEventListener('click',createTransfer);
+
+async function loadAll(){
+  try{
+    const [s,t]=await Promise.all([fetch(`${API_BASE}/api/stats`),fetch(`${API_BASE}/api/transfers`)]); const stats=await s.json(), items=await t.json();
+    $('#statTransfers').textContent=stats.transfers; $('#statActive').textContent=stats.active; $('#statBytes').textContent=formatBytes(stats.totalBytes); renderItems(items);
+  }catch{ toast('Could not refresh activity'); }
+}
+function renderItems(items){
+  const box=$('#activityList'); if(!items.length){box.innerHTML='<div class="empty-state">Your recent transfers will appear here.</div>';return;}
+  box.innerHTML=items.map(x=>`<div class="activity-row"><div><div class="file-name">${escapeHtml(x.originalName)}</div><div class="file-meta">${escapeHtml(x.mime)} · ${new Date(x.createdAt).toLocaleString()}</div></div><div class="activity-size">${formatBytes(x.size)}</div><div class="activity-expiry">${remaining(x.expiresAt)}</div><a class="activity-link" href="${x.downloadUrl}">Open →</a></div>`).join('');
+}
+function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+$('#refreshBtn').addEventListener('click',loadAll); loadAll();
+
+// Promo popup — shows on every visit, not just the first.
+const promoOverlay = $('#promoOverlay');
+function closePromo(){ promoOverlay.classList.remove('show'); }
+$('#promoClose').addEventListener('click', closePromo);
+$('#promoLater').addEventListener('click', closePromo);
+promoOverlay.addEventListener('click', (e) => { if(e.target === promoOverlay) closePromo(); });
+setTimeout(() => promoOverlay.classList.add('show'), 400);
+
+</script>
+</body>
+</html>
